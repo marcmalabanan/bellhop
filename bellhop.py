@@ -3,7 +3,7 @@ import re
 from discord.ext import commands
 
 TOKEN = 'NDM3Mjc1MDAzNjg4NTgzMTk4.DbzroQ.-Lje0_hhkdMTcrwg2G_bEir6vbs'
-IMHERE = re.compile(r"(i[']+m|i[\"]+m|im) he[r]+e")
+IMHERE = re.compile('(i[\']+m|i[\\"]+m|im) he[r]+e', re.IGNORECASE)
 
 bot = commands.Bot(command_prefix='/')
 
@@ -16,7 +16,7 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if re.search(IMHERE, str(message.content)):
+    if IMHERE.search(message.content):
         await message.channel.send("{0.author.mention}, <:ctd_jade:435997993171419136> I'm here <:ctd_jade:435997993171419136>".format(message))
 
 @bot.command()
