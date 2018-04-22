@@ -16,9 +16,7 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    flag_IMHERE = re.search(IMHERE, message)
-
-    if flag_IMHERE:
+    if re.search(IMHERE, str(message)):
         await message.channel.send("{0.author.mention}, <:ctd_jade:435997993171419136> I'm here <:ctd_jade:435997993171419136>".format(message))
 
 @bot.command()
