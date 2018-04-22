@@ -1,1 +1,1 @@
-worker: py -3 bellhop.py
+worker: python3 bellhop.py
