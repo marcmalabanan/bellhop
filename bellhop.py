@@ -1,7 +1,9 @@
 import discord
+import re
 from discord.ext import commands
 
 TOKEN = 'NDM3Mjc1MDAzNjg4NTgzMTk4.DbzroQ.-Lje0_hhkdMTcrwg2G_bEir6vbs'
+IMHERE = re.compile("(i[']+m|i[\"]+m|im) he[r]+e")
 
 bot = commands.Bot(command_prefix='/')
 
@@ -11,7 +13,13 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('------')
-    print(str(bot.emojis))
+
+@bot.event
+async def on_message(message):
+    flag_IMHERE = re.search(IMHERE, message)
+
+    if flag_IMHERE:
+        await message.channel.send("{0.author.mention}, <:ctd_jade:435997993171419136> I'm here <:ctd_jade:435997993171419136>".format(message))
 
 @bot.command()
 async def imhere(ctx):
