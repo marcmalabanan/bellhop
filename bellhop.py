@@ -14,7 +14,7 @@ async def on_ready():
     print(str(bot.emojis))
 
 @bot.command()
-async def hello(ctx):
+async def imhere(ctx):
     await ctx.send("{0.author.mention}, <:ctd_jade:435997993171419136> I'm here <:ctd_jade:435997993171419136>".format(ctx))
 
 @bot.command()
@@ -35,7 +35,7 @@ bot.remove_command('help')
 async def help(ctx):
     embed = discord.Embed(title="Bellhop", description="The list of commands for the Bellhop are:", color=0xeee657)
 
-    embed.add_field(name="/hello", value="Gives a special message from Jade.", inline=False)
+    embed.add_field(name="/imhere", value="Gives a special message from Jade.", inline=False)
     embed.add_field(name="/schedule", value="Gives the current Back to Back podcast schedule.", inline=False)
     embed.add_field(name="/wtf", value="Gives an appropriate 'wtf' gif.", inline=False)
     embed.add_field(name="/wow", value="Gives an appropriate 'wow' gif.", inline=False)
