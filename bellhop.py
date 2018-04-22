@@ -16,6 +16,8 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
+    await bot.process_commands(message)
+    
     if IMHERE.search(message.content):
         await message.channel.send("{0.author.mention}, <:ctd_jade:435997993171419136> I'm here <:ctd_jade:435997993171419136>".format(message))
 
