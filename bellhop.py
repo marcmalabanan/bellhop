@@ -3,7 +3,7 @@ import re
 from discord.ext import commands
 
 TOKEN = 'NDM3Mjc1MDAzNjg4NTgzMTk4.DbzroQ.-Lje0_hhkdMTcrwg2G_bEir6vbs'
-IMHERE = re.compile('(i[\']+m|i[\\"]+m|im) he[r]+e', re.IGNORECASE)
+IMHERE = re.compile(r"(i[']+m|i[\"]+m|im) he[r]+e", re.IGNORECASE)
 
 bot = commands.Bot(command_prefix='/')
 
