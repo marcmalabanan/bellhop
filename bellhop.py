@@ -33,12 +33,19 @@ async def social(ctx):
 
 @bot.command()
 async def wow(ctx):
+    # IMAGES ORDER
+    # [0] = Draymond Game 4 "wow"
+    # [1] = Mariano ALS Pepper Challenge
     IMAGES = ["https://imgur.com/45uoRlu", "https://imgur.com/a/yPBWVcR"]
     await ctx.send(IMAGES[random.randint(0,len(IMAGES) - 1)])
 
 @bot.command()
 async def wtf(ctx):
-    await ctx.send("https://cdn.vox-cdn.com/uploads/chorus_asset/file/9825985/2017_12_06_20_45_42.gif")
+    # IMAGES ORDER
+    # [0] = Jimmy Butler "wtf is that?"
+    # [1] = Westbrook "whos mans?"
+    IMAGES = ["https://cdn.vox-cdn.com/uploads/chorus_asset/file/9825985/2017_12_06_20_45_42.gif", "https://media.giphy.com/media/l0MYIIuwwHEfULhcI/giphy.gif"]
+    await ctx.send(IMAGES[random.randint(0,len(IMAGES) - 1)])
 
 bot.remove_command('help')
 
