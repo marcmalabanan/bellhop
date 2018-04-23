@@ -47,8 +47,8 @@ async def help(ctx):
     embed = discord.Embed(title="Bellhop", description="The list of commands for the Bellhop are:", color=0xeee657)
 
     embed.add_field(name="/help", value="Gives this message.", inline=False)
-    embed.add_field(name="/schedule", value="Gives the current Back to Back podcast schedule.", inline=False)
-    embed.add_field(name="/social", value="Gives the social media links to Count The Dings.", inline=False)
+    embed.add_field(name="/schedule", value="Gives the current Back To Back podcast schedule.", inline=False)
+    embed.add_field(name="/social", value="Gives the social media links for Count The Dings.", inline=False)
     embed.add_field(name="/wow", value="Gives an appropriate 'wow' gif.", inline=False)
     embed.add_field(name="/wtf", value="Gives an appropriate 'wtf' gif.", inline=False)
 
