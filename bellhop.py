@@ -1,4 +1,5 @@
 import discord
+import random
 import re
 from discord.ext import commands
 
@@ -32,7 +33,8 @@ async def social(ctx):
 
 @bot.command()
 async def wow(ctx):
-    await ctx.send("https://imgur.com/a/yPBWVcR")
+    IMAGES = ["https://imgur.com/45uoRlu", "https://imgur.com/a/yPBWVcR"]
+    await ctx.send(IMAGES[random.randint(0,len(IMAGES) - 1)])
 
 @bot.command()
 async def wtf(ctx):
